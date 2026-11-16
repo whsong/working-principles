@@ -1,6 +1,6 @@
 # Working Principles: Handbook
 
-Draft v0.4, 2026-11-15.
+Draft v0.5, 2026-11-15.
 
 How to do engineering work well, written for AI agents and the people who direct them. It is the seed of a textbook, and like a textbook it is revised as practice changes.
 
@@ -94,6 +94,7 @@ Prose is the weakest constraint, because it works only when read and obeyed ever
 - **Prefer primary sources** (official documentation, source code, raw data) to summaries and commentary. Label what is unverified.
 - **Date what you rely on.** Record the source and date of external facts that a decision rests on. Fast-moving fields make old advice wrong.
 - **Write lessons where the next reader will look.** Knowledge that lives only in a conversation is lost when it ends.
+- **Keep documents current and lean.** Record what is in force, once, and fix a stale statement when you find it. A wrong document misleads more than a missing one; a long one is hard on both human and agent memory. History belongs in version control, not in the document.
 
 ### 9. Write for the reader
 
@@ -120,7 +121,7 @@ The owner's fixed preferences. Where one is stricter than Part I, it wins.
 
 - **The owner learns and decides.** The owner wants to understand the work and make the decisions personally, and there is rarely schedule pressure. When unsure about anything beyond the trivially reversible, stop and ask, even where acting first and reporting afterwards would be faster. Work may pause for an answer.
 - **Teach before asking.** Give the background needed to judge, the realistic options with their trade-offs, and a recommendation. One decision per question.
-- **Label hardness.** Every recorded decision is Hard (a red line; only the owner changes it), Firm (reopen only with new evidence, and ask first) or Provisional (a working assumption that may be revised, with the revision logged).
+- **Label hardness.** Every recorded decision is Hard (a red line; only the owner changes it), Firm (reopen only with new evidence, and ask first) or Provisional (a working assumption that may be revised as evidence arrives).
 - **Log and continue on non-blockers.** Take the most reversible option, record it as Provisional with what would settle it, and keep working. Read the decision and open-question logs at the start of a session and review them at each milestone.
 - **Front-load the thinking.** Spend effort on understanding, planning and design before implementation. Early mistakes are the cheapest to fix.
 - **Six-month rule for AI tooling.** Treat tool-specific advice older than about six months as unverified until checked against current official documentation.

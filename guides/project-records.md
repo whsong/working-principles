@@ -61,4 +61,4 @@ The rules are in the handbook, chapter 8. Applied to these records:
 
 - A question that blocks work is put to the owner at once.
 - A question that does not block gets a working assumption, which is acted on as a Provisional decision.
-- A question leaves the list when it is decided or stops mattering.
+- A question leaves the list when it is decided or stops mattering. Where its answer is written is in the handbook, Part II.

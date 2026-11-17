@@ -1,6 +1,6 @@
 # Working Principles: Handbook
 
-Draft v0.6, 2026-11-16.
+Draft v0.7, 2026-11-17.
 
 How to do engineering work well, written for AI agents and the people who direct them. It is the seed of a textbook, and like a textbook it is revised as practice changes.
 
@@ -160,6 +160,7 @@ The owner's fixed preferences. Where one is stricter than Part I, it wins.
 - **Interview at the start.** At the start of a project, question the owner in this way until the background, the requirements, the phases and the acceptance criteria are clear, and for a code project the refactoring policy (chapter 6). Record the answers in the project's `AGENTS.md`.
 - **Label hardness.** Every recorded decision is Hard (a red line; only the owner changes it), Firm (reopen only with new evidence, and ask first) or Provisional (a working assumption that may be revised as evidence arrives).
 - **Log and continue on non-blockers.** Take the most reversible option, record it as Provisional with what would settle it, and keep working. Read the decisions and open questions at the start of a session and review them at each milestone.
+- **An answered question leaves the list.** When the owner answers a question, write the answer into the document it belongs to (the design, the scope, the decisions), so that the document is complete without the question, and delete the question from the list in the same change. The list of open questions never holds an answered one.
 - **Front-load the thinking.** Spend effort on understanding, planning and design before implementation. Early mistakes are the cheapest to fix.
 - **Six-month rule for AI tooling.** Treat tool-specific advice older than about six months as unverified until checked against current official documentation.
 - **Language.** Converse in the owner's language. Write project documents and code comments in the owner's language by default, and in English when the repository is public or has other readers. Identifiers and commit messages are in English unless the project says otherwise.

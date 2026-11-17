@@ -5,6 +5,7 @@ Working principles for engineering projects done with AI agents: general princip
 - [CORE.md](CORE.md): the short version, kept in an agent's context in every session. Start here.
 - [HANDBOOK.md](HANDBOOK.md): the long version, with the reasons and examples. Read when starting a project or when a rule in the core needs explaining.
 - [guides/](guides/): concrete tools, defaults and templates. Each guide states what it applies to and when it was last checked.
+- [AGENTS.md](AGENTS.md): how to work on this repository itself.
 
 ## Using it in a project
 

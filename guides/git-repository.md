@@ -6,7 +6,7 @@
 
 ## Location
 
-- Keep the working tree outside file-sync folders (OneDrive, Dropbox, iCloud). On Windows, check that a folder such as Documents has not been redirected into OneDrive before cloning there.
+- Keep the working tree outside file-sync folders (OneDrive, Dropbox, iCloud). Git and the synchroniser would both manage the same files, and that corrupts them. On Windows, check that a folder such as Documents has not been redirected into OneDrive before cloning there.
 - Reference material that is large or not text (archives, screenshots, exported game data) stays outside the repository, or in a path listed in `.gitignore`.
 
 ## Baseline files

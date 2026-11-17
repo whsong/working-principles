@@ -6,10 +6,8 @@
 
 ## Everywhere
 
-- Before relying on a tool, check that it is installed and which version it is. Check which shell is running; do not assume bash.
 - Quote paths. Paths may contain spaces and non-ASCII characters.
 - State the text encoding explicitly when reading and writing files; use UTF-8 without a byte-order mark.
-- Project setup is a script or a single documented command, so a fresh machine reaches a working state without manual steps.
 
 ## Windows
 
@@ -18,7 +16,6 @@
 - Git may convert line endings on checkout; the repository's `.gitattributes` settles it (see the git guide).
 - Creating symlinks needs Developer Mode or administrator rights.
 - Very long paths can fail; keep repositories near the drive root or the user directory.
-- Known folders such as Documents and Desktop may be redirected into OneDrive.
 
 ## WSL
 

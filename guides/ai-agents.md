@@ -12,6 +12,7 @@
 ## No project-level `CLAUDE.md`
 
 - A new project does not create a `CLAUDE.md`. In an existing project, move whatever its `CLAUDE.md` holds into `AGENTS.md` and delete the file.
+- This applies to the owner's own projects. In a repository that belongs to a team or to others, its `CLAUDE.md` and `AGENTS.md` are theirs: leave them as they are, and add none of the owner's personal principles to them. The owner's principles reach such a repository through the personal level (see Per-machine setup); the owner's own notes about it are kept outside it (see "Where each instruction lives").
 - The deletion is required, not cosmetic. Claude Code reads `AGENTS.md` only when there is no `CLAUDE.md`, `.claude/CLAUDE.md` or `CLAUDE.local.md` in the working directory or in any directory above it. One leftover file, including one in a parent folder, silently stops `AGENTS.md` from loading.
 - This needs Claude Code v2.1.281 or later. Direct reading arrived in v2.1.277, and until v2.1.281 some sessions (Amazon Bedrock, telemetry disabled) still read `CLAUDE.md` only. It is also unavailable when the built-in plugin that reads `AGENTS.md` has been disabled, and in some cases in the first session after upgrading from v2.1.276 or earlier.
 - To check: an interactive session prints a line such as `no CLAUDE.md found; AGENTS.md loaded: <path>` when it starts.
@@ -106,5 +107,9 @@ Decide on each machine whether to do this. It makes the core load in every sessi
 
    A pull that fails, for example with no network or over local changes that conflict, shows a notice and the session starts anyway. The documentation does not say whether the hook runs before `CLAUDE.md` is read, so assume that a pull which brings changes takes effect in the next session. Checked on 2026-11-18 against the Claude Code hooks documentation.
 4. **Cursor:** global rules live in the settings screen (Customize → Rules), not in a file. Paste one sentence there pointing to the clone's `CORE.md`.
+
+Each machine, and each WSL distribution, has its own clone and its own `~/.claude/` (`guides/environments.md`); do not share one clone across the Windows and WSL file systems.
+
+Do not do this on a machine where several people work under one shared login account: a personal `~/.claude/CLAUDE.md` there would apply to everyone's sessions. On such a machine, rely on the URL reference in the project's `AGENTS.md`, or run the agent on a personal machine and reach the shared one over SSH.
 
 A cloud sandbox sees only the repository, so there the URL reference is the only route.

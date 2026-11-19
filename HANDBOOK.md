@@ -1,6 +1,6 @@
 # Working Principles: Handbook
 
-Draft v0.8, 2026-11-18.
+Draft v0.9, 2026-11-18.
 
 How to do engineering work well, written for AI agents and the people who direct them. It is the seed of a textbook, and like a textbook it is revised as practice changes.
 
@@ -101,7 +101,7 @@ Prose is the weakest constraint, because it works only when read and obeyed ever
 
 ### 6. Change safely
 
-- **Keep history.** Everything that matters is under version control, documents included.
+- **Keep history.** Where a project is kept in git, everything that matters is under version control, documents included. Not every project is: a code project normally is, a non-code project often is not, and some folders cannot hold a repository at all, such as one inside a file-sync folder (`guides/git-repository.md`). Whether a project uses git is decided with the owner when the project starts.
 - **One purpose per change.** Each commit does one thing and states the reason. A change with several purposes hides where a problem began.
 - **Look before destroying.** Inspect a target before deleting or overwriting it. Irreversible and outward-facing actions need the owner's confirmation each time.
 - **Never overwrite what cannot be regenerated.** An output that the same command reproduces exactly is derived, and may be replaced. An output of a run with randomness in it, such as a generated image or a sampled answer from a model, cannot be produced again. Keep the output of every such run under its own name, with a sequence number or a timestamp, unless the owner explicitly asks for one to be replaced.

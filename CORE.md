@@ -1,6 +1,6 @@
 # Working Principles: Core
 
-Draft v0.8, 2026-11-18. The short version, meant to be in context in every session. Reasons, examples and tools are in `HANDBOOK.md` and `guides/` of the same repository, https://github.com/whsong/working-principles.
+Draft v0.9, 2026-11-18. The short version, meant to be in context in every session. Reasons, examples and tools are in `HANDBOOK.md` and `guides/` of the same repository, https://github.com/whsong/working-principles.
 
 Precedence: the owner's live instruction > the project's own instructions > this document. When two conflict, say so; do not pick silently.
 

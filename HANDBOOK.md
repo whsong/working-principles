@@ -1,6 +1,6 @@
 # Working Principles: Handbook
 
-Draft v0.7, 2026-11-17.
+Draft v0.8, 2026-11-18.
 
 How to do engineering work well, written for AI agents and the people who direct them. It is the seed of a textbook, and like a textbook it is revised as practice changes.
 
@@ -165,6 +165,7 @@ The owner's fixed preferences. Where one is stricter than Part I, it wins.
 - **Six-month rule for AI tooling.** Treat tool-specific advice older than about six months as unverified until checked against current official documentation.
 - **Language.** Converse in the owner's language. Write project documents and code comments in the owner's language by default, and in English when the repository is public or has other readers. Identifiers and commit messages are in English unless the project says otherwise.
 - **Commit and publish only when asked.**
+- **Keep learning.** When an agent sees a way to improve a rule, in this repository or in a project's instructions, it proposes the change to the owner at that moment, without waiting to be asked. An improvement to a local skill, meaning one kept in the project or in the owner's personal skill directory, is the exception to stopping to ask: the agent makes it without separate approval.
 
 ## Part III. Guides
 

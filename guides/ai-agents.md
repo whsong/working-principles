@@ -84,6 +84,27 @@ Decide on each machine whether to do this. It makes the core load in every sessi
 
 1. Clone `https://github.com/whsong/working-principles` to a directory outside any file-sync folder.
 2. **Claude Code:** in `~/.claude/CLAUDE.md`, import the clone's `CORE.md` with an `@` line and state the clone's path, so the handbook and guides can be found.
-3. **Cursor:** global rules live in the settings screen (Customize → Rules), not in a file. Paste one sentence there pointing to the clone's `CORE.md`.
+3. **Claude Code, keeping the clone current:** without this step the clone is only as new as the last manual `git pull`. In `~/.claude/settings.json`, add a `SessionStart` hook that pulls when a new session starts:
+
+   ```json
+   "hooks": {
+     "SessionStart": [
+       {
+         "matcher": "startup",
+         "hooks": [
+           {
+             "type": "command",
+             "command": "git",
+             "args": ["-C", "<absolute path of the clone>", "pull", "--ff-only", "--quiet"],
+             "timeout": 30
+           }
+         ]
+       }
+     ]
+   }
+   ```
+
+   A pull that fails, for example with no network or over local changes that conflict, shows a notice and the session starts anyway. The documentation does not say whether the hook runs before `CLAUDE.md` is read, so assume that a pull which brings changes takes effect in the next session. Checked on 2026-11-18 against the Claude Code hooks documentation.
+4. **Cursor:** global rules live in the settings screen (Customize → Rules), not in a file. Paste one sentence there pointing to the clone's `CORE.md`.
 
 A cloud sandbox sees only the repository, so there the URL reference is the only route.

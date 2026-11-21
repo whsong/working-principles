@@ -38,6 +38,18 @@ The rules are in the handbook, chapter 8. Applied to these records:
 - No superseded entries, status columns, change logs, finished to-do lists or correction banners.
 - If the text of a decision already lives in another document (a scope or design document, an architecture decision record), the entry points there and adds only the reason and the hardness.
 
+## Projects with an online issue tracker
+
+This section applies only to a project that tracks its work in an online issue tracker (Jira, GitHub Issues and the like). A project without one keeps its items in its own records, as the rest of this guide describes.
+
+In such a project the tracker is the only source for every item registered there: its status, plan, steps, findings, discussion, and the decisions taken on it. This is "One source of truth" (handbook, chapter 3) applied to the copy that drifts most often, because a status written into a local document is stale the day the item moves.
+
+- A local document names an item by its key and adds nothing about its state or its content.
+- The open questions list holds only questions not yet mature enough to become an item. When a question becomes an item, delete it from the list in the same change.
+- A decision taken on one item is recorded in that item; a row in the decisions table may point to the key.
+- Local documents keep what is not about one item: how the system works, the project's rules, the priority order across items.
+- Before reporting an item's status, read it from the tracker, not from a local document.
+
 ## Decisions
 
 ```markdown
@@ -61,4 +73,4 @@ The rules are in the handbook, chapter 8. Applied to these records:
 
 - A question that blocks work is put to the owner at once.
 - A question that does not block gets a working assumption, which is acted on as a Provisional decision.
-- A question leaves the list when it is decided or stops mattering. Where its answer is written is in the handbook, Part II.
+- A question leaves the list when it is decided, stops mattering, or becomes an item in the project's online issue tracker. Where its answer is written is in the handbook, Part II.

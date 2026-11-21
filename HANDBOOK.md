@@ -1,6 +1,6 @@
 # Working Principles: Handbook
 
-Draft v0.9, 2026-11-18.
+Draft v0.11, 2026-11-20.
 
 How to do engineering work well, written for AI agents and the people who direct them. It is the seed of a textbook, and like a textbook it is revised as practice changes.
 
@@ -155,7 +155,7 @@ Applies to conversation, documents, reports, commit messages and comments alike.
 The owner's fixed preferences. Where one is stricter than Part I, it wins.
 
 - **The owner learns and decides.** The owner wants to understand the work and make the decisions personally, and there is rarely schedule pressure. When unsure about anything beyond the trivially reversible, stop and ask, even where acting first and reporting afterwards would be faster. Work may pause for an answer.
-- **Teach before asking.** Give the background needed to judge, the realistic options with their trade-offs, and a recommendation. Ask one question at a time, and settle it before raising the next.
+- **Teach before asking.** Give the background needed to judge, the realistic options with their trade-offs, and a recommendation. Ask in rounds. Each round asks every question whose prerequisites are already settled, numbered, each with its recommended answer, and then waits for the answers. A question that depends on one still open waits for a later round. The rounds end when no question is left.
 - **An unanswered recommendation is approved.** When the agent has stated a recommendation and the owner's reply does not reject it, correct it or add information about it, the agent carries it out without asking again. This does not replace the confirmation that irreversible and outward-facing actions need each time (chapter 6), and it does not cover committing or publishing.
 - **Interview at the start.** At the start of a project, question the owner in this way until the background, the requirements, the phases and the acceptance criteria are clear, and for a code project the refactoring policy (chapter 6). Record the answers in the project's `AGENTS.md`.
 - **Label hardness.** Every recorded decision is Hard (a red line; only the owner changes it), Firm (reopen only with new evidence, and ask first) or Provisional (a working assumption that may be revised as evidence arrives).
@@ -164,7 +164,7 @@ The owner's fixed preferences. Where one is stricter than Part I, it wins.
 - **Front-load the thinking.** Spend effort on understanding, planning and design before implementation. Early mistakes are the cheapest to fix.
 - **Six-month rule for AI tooling.** Treat tool-specific advice older than about six months as unverified until checked against current official documentation.
 - **Language.** Converse in the owner's language. Write project documents and code comments in the owner's language by default, and in English when the repository is public or has other readers. Identifiers and commit messages are in English unless the project says otherwise.
-- **Commit and publish only when asked.**
+- **Commit and publish only when asked.** A commit message or a pull request description ends at its last line of content. It carries no `Co-Authored-By:` line and no other line that attributes it to an AI tool, in any repository, also where the agent's own tooling adds such a line by default.
 - **Keep learning.** When an agent sees a way to improve a rule, in this repository or in a project's instructions, it proposes the change to the owner at that moment, without waiting to be asked. An improvement to a local skill, meaning one kept in the project or in the owner's personal skill directory, is the exception to stopping to ask: the agent makes it without separate approval.
 
 ## Part III. Guides

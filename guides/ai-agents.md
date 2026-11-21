@@ -68,7 +68,8 @@ An agent reads a URL only if it follows this instruction and has network access,
 
 - A skill is a directory with a `SKILL.md` in the open Agent Skills format (agentskills.io). Frontmatter needs `name` (lowercase, hyphens, equal to the directory name) and `description` (what it does and when to use it). Keep `SKILL.md` under 500 lines; put detail in files beside it.
 - Put project skills in `.claude/skills/<name>/`. Claude Code scans only that location, and Cursor loads it for compatibility, so it is the one directory both read. Cursor also reads `.agents/skills/`; Claude Code does not.
-- Optional: the `grill-me` skill (`skills/productivity/grill-me/` in `github.com/mattpocock/skills`) carries out the start-of-project interview described in the handbook, Part II. Its existence was checked on 2026-11-16; its content was not reviewed. Without it, the agent conducts the interview directly.
+- Skills that one person uses in every project live at the personal level. `skills/` in this repository holds such skills, one folder each. A skill there holds the method only. What is true of one site, one person or one project is a setting: each skill has a `settings-template.md` that lists its settings, the filled-in settings files are kept outside this repository beside the project's documents, and the project's `AGENTS.md` names them. A skill asks when a setting is missing; it does not guess.
+- A script that belongs to a skill sits in the skill's folder and is called through `${CLAUDE_SKILL_DIR}`, so it is present wherever the skill is. Its dependencies are pinned in a `requirements.txt` beside it.
 
 ## Rules that must not be broken
 
@@ -107,6 +108,19 @@ Decide on each machine whether to do this. It makes the core load in every sessi
 
    A pull that fails, for example with no network or over local changes that conflict, shows a notice and the session starts anyway. The documentation does not say whether the hook runs before `CLAUDE.md` is read, so assume that a pull which brings changes takes effect in the next session. Checked on 2026-11-18 against the Claude Code hooks documentation.
 4. **Cursor:** global rules live in the settings screen (Customize → Rules), not in a file. Paste one sentence there pointing to the clone's `CORE.md`.
+5. **Claude Code, skills:** to use a skill from the clone's `skills/`, link its folder into the personal skill directory, so that the clone stays the only copy:
+
+   ```powershell
+   # Windows: a directory junction needs no administrator rights
+   New-Item -ItemType Junction -Path "$HOME\.claude\skills\<name>" -Target "<absolute path of the clone>\skills\<name>"
+   ```
+
+   ```bash
+   # Linux and WSL
+   ln -s "<absolute path of the clone>/skills/<name>" ~/.claude/skills/<name>
+   ```
+
+   The Claude Code documentation says that a skill folder may be a symbolic link; it does not mention junctions. A junction was tested on 2026-11-20 on Windows 11: the skill loaded in a new session. Then install what the skill's `requirements.txt` names, if it has one, and fill in its settings (see Skills).
 
 Each machine, and each WSL distribution, has its own clone and its own `~/.claude/` (`guides/environments.md`); do not share one clone across the Windows and WSL file systems.
 

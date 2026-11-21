@@ -5,6 +5,7 @@ Working principles for engineering projects done with AI agents: general princip
 - [CORE.md](CORE.md): the short version, kept in an agent's context in every session. Start here.
 - [HANDBOOK.md](HANDBOOK.md): the long version, with the reasons and examples. Read when starting a project or when a rule in the core needs explaining.
 - [guides/](guides/): concrete tools, defaults and templates. Each guide states what it applies to and when it was last checked.
+- [skills/](skills/): skills for AI agents that are useful in every project, one folder each: `jira-issues` (issue tracking in Jira) and `confluence-organization` (keeping a Confluence site in order). They hold the method only; your site and project facts go into settings files that you keep yourself. How to install one is in [guides/ai-agents.md](guides/ai-agents.md), Per-machine setup.
 - [AGENTS.md](AGENTS.md): how to work on this repository itself.
 
 ## Using it in a project

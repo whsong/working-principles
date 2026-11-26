@@ -44,6 +44,7 @@ Copy the part you need, keep the headings exactly as they are (the skill refers 
 | Setting | Meaning | Where to find it | Value |
 |---|---|---|---|
 | Statuses the agent sets | Which transitions the agent makes itself and which stay with you | Your choice | |
+| Access to the History of an issue | Whether you can open the History of an issue. It is the only place where a description that was overwritten can still be found, so without it nothing an agent overwrites comes back | Open an issue and look for History under Activity | |
 | Issues that are no longer needed | What happens to them when the project has no "won't do" status: closed with a resolution, or emptied and kept as a free key | Your choice | |
 | Reuse of free keys | Whether the agent must look for a free key before creating an issue, and the query that finds one | Your choice | |
 

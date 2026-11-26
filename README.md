@@ -6,6 +6,7 @@ Working principles for engineering projects done with AI agents: general princip
 - [HANDBOOK.md](HANDBOOK.md): the long version, with the reasons and examples. Read when starting a project or when a rule in the core needs explaining.
 - [guides/](guides/): concrete tools, defaults and templates. Each guide states what it applies to and when it was last checked.
 - [skills/](skills/): skills for AI agents that are useful in every project, one folder each: `jira-issues` (issue tracking in Jira) and `confluence-organization` (keeping a Confluence site in order). They hold the method only; your site and project facts go into settings files that you keep yourself. How to install one is in [guides/ai-agents.md](guides/ai-agents.md), Per-machine setup.
+- [tools/ccs.py](tools/ccs.py): `ccs`, one file for Windows and Linux (Python 3, standard library only) that browses the Claude Code sessions of the current folder or of every folder, grouped by folder, with session id, title and first input. It previews and resumes a session, and deletes one to the trash. Install once per machine with `python tools/ccs.py install`, then run `ccs`.
 - [AGENTS.md](AGENTS.md): how to work on this repository itself.
 
 ## Using it in a project
